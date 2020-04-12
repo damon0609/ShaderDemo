@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Shader05
-  m_Shader: {fileID: 4800000, guid: f89d8cc3a5edc97458bd28d3dc685ad0, type: 3}
+  m_Shader: {fileID: 4800000, guid: 4fbc9fdd94126439cb8cddfa0e60da6c, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -63,19 +63,19 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Height: 0.4
+    - _Height: 0.127
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Radius: 0.01
+    - _Radius: 0.247
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _Width: 0.6
+    - _Width: 0.388
     - _ZWrite: 1
     m_Colors:
-    - _Center: {r: 0.5, g: 0.5, b: 0, a: 0}
-    - _Color: {r: 0, g: 0.36917162, b: 1, a: 1}
+    - _Center: {r: 0, g: 0, b: 0, a: 0}
+    - _Color: {r: 0.8773585, g: 0.35772306, b: 0.26072446, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
