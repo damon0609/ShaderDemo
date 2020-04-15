@@ -29,7 +29,7 @@
         v2f o;
         o.vertex = UnityObjectToClipPos(v.vertex);
         o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-        o.uv=mul(float2x2(cos(_Time.y),0,sin(_Time.y),0),o.uv);
+        // o.uv=mul(float2x2(cos(_Time.y),0,sin(_Time.y),0),o.uv);
         return o;
     }
 
