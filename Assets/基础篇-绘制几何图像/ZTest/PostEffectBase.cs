@@ -27,8 +27,6 @@ public class PostEffectBase : MonoBehaviour {
     private float mEdgeSize;
     private float scaleValue;
 
-    public SpriteRenderer sprite;
-
     private Material CheckShaderAndMaterial (Shader shader) {
         Material mat = null;
         if (shader == null || !shader.isSupported)
