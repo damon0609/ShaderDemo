@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Shader09
-  m_Shader: {fileID: 4800000, guid: e9ea24b09b2f523499e9144eb33875fc, type: 3}
+  m_Shader: {fileID: 4800000, guid: 4c5553ebddbd6415da67255dd6e29c44, type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 0bd993c04852fe14f88b0ecd03b94536, type: 3}
+        m_Texture: {fileID: 2800000, guid: 50319ecf8517443818f6fee9541ab43d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:

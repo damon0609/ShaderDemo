@@ -5,7 +5,6 @@ using UnityEngine;
 public class MaskPostEffect : MonoBehaviour {
     public Shader shader;
 
-    private Vector2 pos = Vector2.zero;
 
     [SerializeField]
     private Material material;
@@ -14,6 +13,7 @@ public class MaskPostEffect : MonoBehaviour {
 
     [Range(0,0.1f)]
     public float maskFacotr;
+    private Vector2 pos = new Vector2(0.5f,0.5f);
 
     void Start () {
     }
@@ -21,7 +21,8 @@ public class MaskPostEffect : MonoBehaviour {
     void Update () {
         if (Input.GetMouseButtonDown (0)) {
             Vector2 temp = Input.mousePosition;
-            pos = new Vector2 (temp.x / Screen.width, temp.y / Screen.height);
+            pos.x =temp.x / Screen.width;
+            pos.y = temp.y / Screen.height;
         }
         if (material != null) {
             material.SetVector ("_Pos", pos);

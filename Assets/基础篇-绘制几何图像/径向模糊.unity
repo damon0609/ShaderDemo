@@ -38,13 +38,13 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 11
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -156,7 +156,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2187a2ea636944b45bd7f39e82699ad1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -295,13 +295,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1682504110}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32630bbd0e673470c8c468bc46546eab, type: 3}
+  m_Script: {fileID: 11500000, guid: 51add3c1e48c34f378b9b01aefacf192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shader: {fileID: 4800000, guid: 4c5553ebddbd6415da67255dd6e29c44, type: 3}
-  material: {fileID: 2100000, guid: f6b2b0f94d20040e9a831fb5e0a04256, type: 2}
-  maskSize: 0.2
-  maskFacotr: 0.03
+  blurShader: {fileID: 4800000, guid: 56a0171af94694043b13996650da0cc2, type: 3}
+  material: {fileID: 2100000, guid: 2187a2ea636944b45bd7f39e82699ad1, type: 2}
+  blurFactor: 0.01
 --- !u!1 &1983589456
 GameObject:
   m_ObjectHideFlags: 0

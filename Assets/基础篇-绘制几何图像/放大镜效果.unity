@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -79,7 +79,7 @@ LightmapSettings:
     m_PVRFilterTypeDirect: 0
     m_PVRFilterTypeIndirect: 0
     m_PVRFilterTypeAO: 0
-    m_PVRFilteringMode: 1
+    m_PVRFilteringMode: 2
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
@@ -166,7 +166,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0bd993c04852fe14f88b0ecd03b94536, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 50319ecf8517443818f6fee9541ab43d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -283,14 +283,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1682504110}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad2959574a48b0640a61757469dd5b68, type: 3}
+  m_Script: {fileID: 11500000, guid: cb9499f365b28494cbb3bc6f8271c9ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zoomShader: {fileID: 4800000, guid: ad990f210678f87448fc61ebe0933489, type: 3}
-  mScaleFactor: 0.29
-  mScaleArea: 0.19
-  mEdgeSize: 0.53
-  sprite: {fileID: 0}
+  zoomShader: {fileID: 4800000, guid: 9eee840426e664d74aecd289ecaa56c4, type: 3}
+  mScaleFactor: 0.57
+  mScaleArea: 0.241
+  mEdgeSize: 0.506
 --- !u!1 &1983589456
 GameObject:
   m_ObjectHideFlags: 0

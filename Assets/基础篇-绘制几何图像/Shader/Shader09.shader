@@ -41,8 +41,11 @@
 
             fixed4 frag (v2f i) : SV_Target
             {
+                float2 scale = float2(_ScreenParams.x/_ScreenParams.y,1);
                 fixed4 col = tex2D(_MainTex, i.uv);
-                float dis = distance(_Pos,i.uv);
+                float2 dir = _Pos -i.uv;
+                fixed dis = length(dir*scale);
+                // float dis = distance(fixed2(0.5,0.5),i.uv*scale);
                 // float value =1-step(_MaskSize,dis);
                 float value = smoothstep(_MaskSize+_MaskFactor,_MaskSize,dis);
                 return col*fixed4(value,value,value,1);
