@@ -1,0 +1,4 @@
+sceneSetups:
+- path: "Assets/ShaderDemo/Shader07/\u6A21\u578B\u900F\u660E.unity"
+  isLoaded: 1
+  isActive: 1
