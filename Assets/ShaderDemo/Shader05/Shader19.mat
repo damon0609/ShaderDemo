@@ -79,9 +79,9 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
-    - _XAxis: 3
+    - _XAxis: 0.3
     - _YAxis: 3
-    - _ZAxis: 3
+    - _ZAxis: 5.7
     - _ZWrite: 1
     m_Colors:
     - _BorderColor: {r: 0.9056604, g: 0.021359911, b: 0.76783127, a: 1}
