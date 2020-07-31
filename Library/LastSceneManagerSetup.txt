@@ -1,4 +1,4 @@
 sceneSetups:
-- path: "Assets/ShaderDemo/Shader07/\u7279\u654801.unity"
+- path: "Assets/\u4F7F\u7528\u6E10\u53D8\u7EB9\u7406\u7684\u6F2B\u53CD\u5C04.unity"
   isLoaded: 1
   isActive: 1

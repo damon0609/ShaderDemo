@@ -76,11 +76,11 @@ Shader "Custom/07/Shader0709"
                 float3 tangentLightDir = normalize(i.lightDir);
                 float3 tangentViewDir = normalize(i.viewDir);
 
-                float4 packedNormal = tex2D(_Bump,i.uv.zw);
+                float4 packedNormal = tex2D(_Bump,i.uv.zw);//法线纹理和uv进行采样
 
-                float3 tangentNormal = UnpackNormal(packedNormal);
-                tangentNormal.xy*=_BumpScale;
-                tangentNormal.z = sqrt(1 - saturate(dot(tangentNormal.xy,tangentNormal.xy)));
+                float3 tangentNormal = UnpackNormal(packedNormal);//将像素转换成法线向量
+                tangentNormal.xy*=_BumpScale;//法线的强度
+                tangentNormal.z = sqrt(1 - saturate(dot(tangentNormal.xy,tangentNormal.xy)));//计算法线的方向
 
                 fixed3 albedo = tex2D(_MainTex,i.uv).rgb*_Color.rgb;
                 fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz*albedo;
