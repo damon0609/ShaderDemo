@@ -2,7 +2,6 @@
   "dependencies": {
     "com.unity.assetbundlebrowser": "1.7.0",
     "com.unity.package-manager-ui": "2.0.8",
-    "com.unity.recorder": "2.2.0-preview.4",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
     "com.unity.modules.assetbundle": "1.0.0",

@@ -103,40 +103,27 @@
      <None Include="Assets\ShaderDemo\Shader07\Shader\Shader0702.shader" />
      <None Include="Assets\ShaderDemo\Shader05\Shader19.shader" />
      <None Include="Assets\ShaderDemo\Shader06\Shader004.shader" />
+     <None Include="Assets\ShaderDemo\Shader08\Shader\Shader0801.shader" />
      <None Include="Assets\ShaderDemo\Shader07\Shader\Shader0707.shader" />
      <None Include="Assets\ShaderDemo\Shader07\Shader\Shader0706.shader" />
      <None Include="Assets\ShaderDemo\Shader05\Shader15.shader" />
      <None Include="Assets\ShaderDemo\Shader07\Shader\Shader0701.shader" />
+     <None Include="Assets\ShaderDemo\Shader08\Shader\Shader0802.shader" />
      <None Include="Assets\ShaderDemo\Shader05\Shader06.shader" />
      <None Include="Assets\ShaderDemo\Shader07\Shader\Shader0710.shader" />
      <None Include="Assets\ShaderDemo\Shader06\Shader011.shader" />
+     <None Include="Assets\ShaderDemo\Shader08\Shader\Shader0805.shader" />
      <None Include="Assets\ShaderDemo\Shader05\Shader16.shader" />
      <None Include="Assets\ShaderDemo\Shader05\Shader13.shader" />
      <None Include="Assets\Assets1\Shaders\CutPlane.shader" />
      <None Include="Assets\ShaderDemo\Shader06\Shader005.shader" />
      <None Include="Assets\ShaderDemo\Shader05\NewSurfaceShader.shader" />
+     <None Include="Assets\ShaderDemo\Shader08\Shader\Shader0804.shader" />
+     <None Include="Assets\ShaderDemo\Shader08\Shader\Shader0803.shader" />
      <None Include="Assets\ShaderDemo\Shader07\Shader\Shader0708.shader" />
      <None Include="Assets\ShaderDemo\Shader06\Shader003.shader" />
      <None Include="Assets\ShaderDemo\Shader05\Shader04.shader" />
      <None Include="Assets\ShaderDemo\Shader05\Shader03.shader" />
- <Reference Include="Unity.Timeline.Editor">
- <HintPath>/Users/damon/Documents/GitHub/ShaderDemo/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Recorder.Editor">
- <HintPath>/Users/damon/Documents/GitHub/ShaderDemo/Library/ScriptAssemblies/Unity.Recorder.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Recorder">
- <HintPath>/Users/damon/Documents/GitHub/ShaderDemo/Library/ScriptAssemblies/Unity.Recorder.dll</HintPath>
- </Reference>
- <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>/Users/damon/Documents/GitHub/ShaderDemo/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline">
- <HintPath>/Users/damon/Documents/GitHub/ShaderDemo/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
- </Reference>
- <Reference Include="Unity.AssetBundleBrowser.Editor">
- <HintPath>/Users/damon/Documents/GitHub/ShaderDemo/Library/ScriptAssemblies/Unity.AssetBundleBrowser.Editor.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
  </Reference>
