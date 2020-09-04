@@ -42,9 +42,10 @@
             struct v2f
             {
                 float4 vertex : SV_POSITION;
-                float3 lightDir:TEXCOORD0;
-                float3 viewDir:TEXCOORD1;
-                float4 uv:TEXCOORD2;
+                float4 uv:TEXCOORD0;
+                float4 row0:TEXCOORD1;
+                float4 row1:TEXCOORD2;
+                float4 row2:TEXCOORD3;
             };
 
             v2f vert (appdata v)
@@ -54,30 +55,40 @@
                 o.uv.xy = v.uv.xy*_MainTex_ST.xy+_MainTex_ST.zw;
                 o.uv.zw = v.uv.xy*_Bump_ST.xy+_Bump_ST.zw;//uv的平移和缩放
 
-                float3 binormal = cross(normalize(v.tangent.xyz),normalize(v.normal))*v.tangent.w;
-                float3x3 rotation = float3x3(v.tangent.xyz,binormal,v.normal);
+                float3 worldPos = mul(unity_ObjectToWorld,v.vertex).xyz;
+                float3 worldNormal  = UnityObjectToWorldNormal(v.normal);
+                float3 worldTangent = UnityWorldToObjectDir(v.tangent).xyz;//将切线转换到世界空间下
+                float3 worldBinormal = cross(worldNormal,worldTangent)*v.tangent.w;//计算出副切线的
 
-                o.lightDir = mul(rotation,ObjSpaceLightDir(v.vertex)).xyz;//将顶点转换到光源空间
-                o.viewDir = mul(rotation,ObjSpaceViewDir(v.vertex)).xyz;//将顶点转换成观察空间
+                //世界空间下的切线矩阵
+                o.row0 = float4(worldTangent.x,worldBinormal.x,worldNormal.x,worldPos.x);
+                o.row1 = float4(worldTangent.y,worldBinormal.y,worldNormal.y,worldPos.y);
+                o.row2 = float4(worldTangent.z,worldBinormal.z,worldNormal.z,worldPos.z);
                 return o;
             }
             fixed4 frag (v2f i) : SV_Target
             {
-                float3 tangentLightDir = normalize(i.lightDir);
-                float3 tangentViewDir = normalize(i.viewDir);
+                float3 worldPos = float3(i.row0.w,i.row1.w,i.row2.w);
+
+                fixed3 lightDir = normalize(UnityWorldSpaceLightDir(worldPos));
+                fixed3 viewDir = normalize(UnityWorldSpaceViewDir(worldPos));
 
                 fixed4 packedNormal = tex2D(_Bump,i.uv.zw);//对法线纹理进行采样
-                fixed3 tangentNormal = UnpackNormal(packedNormal);//像素法线进行反映射
+                fixed3 bump = UnpackNormal(packedNormal);//像素法线进行反映射
 
-                tangentNormal.xy*=_BumpScale;
-                tangentNormal.z = sqrt(1.0 - saturate(dot(tangentNormal.xy,tangentNormal.xy)));
+                bump.xy*=_BumpScale;
+                bump.z = sqrt(1.0 - saturate(dot(bump.xy,bump.xy)));
+
+                bump = normalize(half3(dot(i.row0.xyz,bump),dot(i.row1.xyz,bump),dot(i.row2.xyz,bump)));//将切线从物体坐标转换到世界坐标系
+
+
 
                 fixed3 albedo = tex2D(_MainTex,i.uv.xy).rgb*_MainColor;
                 fixed3 ambient = UNITY_LIGHTMODEL_AMBIENT.xyz*albedo;
 
-                fixed3 diffuse = _LightColor0.rgb*albedo*max(0,dot(tangentNormal,tangentLightDir));//漫反射光照模型
-                fixed3 halfDir = normalize(tangentLightDir+tangentViewDir);
-                fixed3 specular = _LightColor0.rgb*_Specular.rgb*pow(max(0,dot(tangentNormal,halfDir)),_Gloss);//高光反射模型
+                fixed3 diffuse = _LightColor0.rgb*albedo*max(0,dot(bump,lightDir));//漫反射光照模型
+                fixed3 halfDir = normalize(lightDir+viewDir);
+                fixed3 specular = _LightColor0.rgb*_Specular.rgb*pow(max(0,dot(bump,halfDir)),_Gloss);//高光反射模型
 
                 return fixed4(albedo+diffuse+specular,1.0);
 
