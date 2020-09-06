@@ -7,6 +7,8 @@
     SubShader
     {
         Tags{"Queue"="Geometry"}
+        ZTest On
+        ZWrite Off
         Pass
         {
             CGPROGRAM

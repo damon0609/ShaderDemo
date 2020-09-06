@@ -7,8 +7,8 @@
     SubShader
     {
         Tags{"Queue"="Geometry"}
-        ZTest Off
-        ZWrite On
+        ZTest On //进行深度测试
+        ZWrite On //不写入深度缓存区
         Pass
         {
             CGPROGRAM
