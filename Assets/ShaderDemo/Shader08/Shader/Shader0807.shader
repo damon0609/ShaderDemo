@@ -3,6 +3,7 @@
     Properties
     {
         _MainColor("Color",Color)=(1,1,1,1)
+        _OutLineColor("OutLineColor",Color) = (1,1,1,1)
     }
     SubShader
     {
@@ -25,7 +26,9 @@
             {
                 float4 vertex : SV_POSITION;
             };
+
             fixed4 _MainColor;
+            fixed4 _OutLineColor;
             v2f vert (appdata v)
             {
                 v2f o;
@@ -34,7 +37,7 @@
             }
             fixed4 frag (v2f i) : SV_Target
             {
-                return _MainColor;
+                return _OutLineColor;
             }
             ENDCG
         }
