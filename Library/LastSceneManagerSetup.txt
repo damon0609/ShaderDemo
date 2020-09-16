@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/ShaderDemo/Shader09/CommandBuffer.unity
-  isLoaded: 1
-  isActive: 1
