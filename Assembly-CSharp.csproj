@@ -73,6 +73,7 @@
      <Compile Include="Assets\ShaderDemo\Scripts\ZTest01.cs" />
      <Compile Include="Assets\ShaderDemo\Shader07\Scripts\CapsuleTest.cs" />
      <Compile Include="Assets\ShaderDemo\Shader07\Scripts\CircleTest.cs" />
+     <Compile Include="Assets\ShaderDemo\Shader09\Scripts\CommandBuffer01.cs" />
      <Compile Include="Assets\ShaderDemo\Shader09\Scripts\MeshCreater.cs" />
      <Compile Include="Assets\ShaderDemo\Shader09\Scripts\RenderTextureDemo.cs" />
      <Compile Include="Assets\ShaderTutorial\OVRScreenFade\OVRScreenFade.cs" />
@@ -156,6 +157,7 @@
      <None Include="Assets\ShaderDemo\Shader08\Shader\Shader0804.shader" />
      <None Include="Assets\ShaderDemo\Shader08\Shader\Shader0803.shader" />
      <None Include="Assets\ShaderDemo\Shader07\Shader\Shader0708.shader" />
+     <None Include="Assets\ShaderDemo\Shader09\Shader\Shader0902.shader" />
      <None Include="Assets\ShaderDemo\Shader08\Shader\Shader0806.shader" />
      <None Include="Assets\ShaderDemo\Shader06\Shader003.shader" />
      <None Include="Assets\ShaderDemo\Shader05\Shader04.shader" />

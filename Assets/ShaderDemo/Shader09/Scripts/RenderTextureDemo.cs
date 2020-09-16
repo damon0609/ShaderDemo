@@ -7,7 +7,6 @@ using UnityEngine.Rendering;
 public class RenderTextureDemo : MonoBehaviour
 {
     private Renderer targetRenderer;
-
     private RenderTexture rt;
     private CommandBuffer commandBuffer;
     public Material material;
