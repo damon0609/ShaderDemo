@@ -56,8 +56,11 @@
      <Compile Include="Assets\Assets1\Scripts\TestMoveVertices.cs" />
      <Compile Include="Assets\Assets1\Scripts\TestScript.cs" />
      <Compile Include="Assets\heatmaps\Heatmap.cs" />
+     <Compile Include="Assets\MathDemo\Scripts\NormalDemo.cs" />
+     <Compile Include="Assets\MathDemo\Scripts\WorldSpaceDemo01.cs" />
      <Compile Include="Assets\MeshDemo\Scripts\Cube.cs" />
      <Compile Include="Assets\MeshDemo\Scripts\Mesh01.cs" />
+     <Compile Include="Assets\MeshDemo\Scripts\Mesh02.cs" />
      <Compile Include="Assets\MeshDemo\Scripts\MeshFactory.cs" />
      <Compile Include="Assets\MeshDemo\Scripts\PlaneTransform.cs" />
      <Compile Include="Assets\MeshDemo\Scripts\Rain.cs" />

@@ -50,7 +50,7 @@ public class Cube : MonoBehaviour
         {
             Vector3 temp = transform.TransformPoint(vertexs[i]);
             Vector3 dir = temp - p1;
-            Gizmos.DrawLine(p1, p1 + dir);
+            Gizmos.DrawLine(p1, p1 + dir.normalized);
 
             float cosQ = Vector3.Dot(dir.normalized, -planeNormal);
             float dis = dir.magnitude * cosQ;
