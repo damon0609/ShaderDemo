@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class NormalDemo : MonoBehaviour {
+
     private Transform cache;
     private MeshFilter meshFilter;
     private Mesh mesh;
@@ -11,13 +12,17 @@ public class NormalDemo : MonoBehaviour {
     private Matrix4x4 localToWorldInverseTranspose;
 
     public bool worldNormal = true;
+
     private void OnDrawGizmos () {
         if (cache == null) {
             cache = transform;
             meshFilter = cache.GetComponent<MeshFilter> ();
             mesh = meshFilter.mesh;
         }
+
         localToworldMatrix = cache.transform.localToWorldMatrix; //本地到世界的矩阵
+
+        //将切线转换成世界空间下坐标
         localToWorldInverseTranspose = localToworldMatrix.inverse.transpose; //逆矩阵-》转置矩阵
 
         Vector3[] normals = mesh.normals;

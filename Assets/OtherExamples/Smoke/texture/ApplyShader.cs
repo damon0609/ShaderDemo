@@ -14,7 +14,6 @@ public class ApplyShader : MonoBehaviour
     void Start ()
     {
         Graphics.Blit(initialTexture, texture);
-
         buffer = new RenderTexture(texture.width, texture.height, texture.depth, texture.format);
     }
     
