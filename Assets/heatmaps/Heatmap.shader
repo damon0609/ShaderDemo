@@ -54,9 +54,9 @@ Shader "Hidden/Heatmap" {
 				}
 
 				h = saturate(h);
-				col.a =h; 
-				// half4 color = tex2D(_HeatTex, fixed2(h, 0.5));
-				return col;
+				// col.a =h; 
+				half4 color = tex2D(_HeatTex, fixed2(h, 0.5));
+				return color;
 			}
 			ENDCG
 		}

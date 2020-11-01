@@ -1,25 +1,24 @@
-﻿Shader "Custom/10/Shader1001"
+﻿Shader "Custom/10/Shader1002"
 {
     Properties
     {
-        _Angle("Angle",Range(0,360))=60
+        _Hex("Hex",2D)="white"{}
     }
     SubShader
     {
-        Tags { "RenderType"="Transparent" "Queue"="Transparent"}
-        Blend SrcAlpha OneMinusSrcAlpha
         Pass
         {
             ZWrite Off
-
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
             #include "UnityCG.cginc"
 
-            float _Angle;
-            uniform fixed2 _edges[4];
-            uniform int _index;
+            uniform int _point_length;
+            uniform float3 _points[100];
+            uniform float2 _properties[100];
+            sampler2D _Hex;
+            fixed4 _Hex_ST;
 
             struct appdata
             {
@@ -35,22 +34,20 @@
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
-                o.uv = v.uv;
                 return o;
             }
             fixed4 frag (v2f i) : SV_Target
             {
-                i.uv.xy-=fixed2(0.5,0.5);
-                // fixed a = clamp(dot(fixed2(1,0),i.uv.xy),0,0.5);
-
-                // fixed result = dot(_edges[_index],normalize(i.uv.xy));
-                fixed result = dot(fixed2(0,1),normalize(i.uv.xy));
-                fixed a = 0;
-                if(result>0.7f)
+                half h = 0;
+                for(int i=0;i<_point_length;i++)
                 {
-                    a=1;
+                    half d = distance(fixed3(0,0,0),_points[i].xyz);
+                    half rate = d/_properties[i].x;
+                    half h1 = 1-saturate(rate);
+                    h=h1*_properties[i].y;
                 }
-                fixed4 col = fixed4(1,1,1,a);
+                h = saturate(h);
+                fixed4 col = tex2D(_Hex,fixed2(h,0.5));
                 return col;
             }
             ENDCG
