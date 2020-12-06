@@ -3,7 +3,6 @@ Shader "Test/CutPlane" {
     SubShader {
         Tags { "RenderType"="Opaque" }
         Pass {
-            
             ColorMask 0
             CGPROGRAM
             #pragma vertex vert
@@ -14,7 +13,8 @@ Shader "Test/CutPlane" {
             }
             fixed4 frag () : SV_Target { 
                 discard;
-                return fixed4(0,0,0,0); }
+                return fixed4(0,0,0,0);
+            }
             ENDCG
         }
     }

@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2018_4_21;UNITY_2018_4;UNITY_2018;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_TEXTURE_STREAMING;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_VIDEO;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_OSX;PLATFORM_STANDALONE;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_SPATIALTRACKING;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2018_4_21;UNITY_2018_4;UNITY_2018;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_TEXTURE_STREAMING;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_VIDEO;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_OSX;PLATFORM_STANDALONE;UNITY_STANDALONE_OSX;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_GAMECENTER;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_NATIVE_CRASH_REPORTING;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_SPATIALTRACKING;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_STANDARD_2_0;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_OSX;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -72,6 +72,7 @@
      <Compile Include="Assets\ShaderDemo\Scripts\HeapMap.cs" />
      <Compile Include="Assets\ShaderDemo\Scripts\MaskPostEffect.cs" />
      <Compile Include="Assets\ShaderDemo\Scripts\PostEffectBase.cs" />
+     <Compile Include="Assets\ShaderDemo\Scripts\ScreenPostEffect.cs" />
      <Compile Include="Assets\ShaderDemo\Scripts\Soild.cs" />
      <Compile Include="Assets\ShaderDemo\Scripts\Soild1.cs" />
      <Compile Include="Assets\ShaderDemo\Scripts\ZTest01.cs" />
@@ -81,9 +82,16 @@
      <Compile Include="Assets\ShaderDemo\Shader09\Scripts\MeshCreater.cs" />
      <Compile Include="Assets\ShaderDemo\Shader09\Scripts\RenderTextureDemo.cs" />
      <Compile Include="Assets\ShaderDemo\Shader09\程序纹理\ProceduralTexture.cs" />
+     <Compile Include="Assets\ShaderDemo\Shader10\Scripts\DrawLine.cs" />
+     <Compile Include="Assets\ShaderDemo\Shader10\Scripts\GetObjectPoint.cs" />
      <Compile Include="Assets\ShaderDemo\Shader10\Scripts\HexTexture.cs" />
      <Compile Include="Assets\ShaderDemo\Shader10\Scripts\MeshDecal.cs" />
+     <Compile Include="Assets\ShaderDemo\Shader10\Scripts\PlacingVirtural.cs" />
+     <Compile Include="Assets\ShaderDemo\Shader10\Scripts\ReplacementShader.cs" />
+     <Compile Include="Assets\ShaderDemo\Shader10\Scripts\ScreenPostEffect01.cs" />
      <Compile Include="Assets\ShaderDemo\Shader10\Scripts\UVDot.cs" />
+     <Compile Include="Assets\ShaderDemo\Shader10\ZTest\TestManager.cs" />
+     <Compile Include="Assets\ShaderDemo\Shader12\Scripts\CameraMatrix.cs" />
      <Compile Include="Assets\ShaderTutorial\OVRScreenFade\OVRScreenFade.cs" />
      <Compile Include="Assets\ShaderTutorial\OVRScreenFade2\OVRScreenFade2.cs" />
      <Compile Include="Assets\ShaderTutorial\RainDrop\Debris.cs" />
@@ -112,7 +120,9 @@
      <Compile Include="Assets\WikiExamples\Variations on Lighting\Soft Shadows of Spheres\SoftShadowsofSpheres.cs" />
      <None Include="Assets\ShaderDemo\Shader06\Shader009.shader" />
      <None Include="Assets\ShaderDemo\Shader06\Shader007.shader" />
+     <None Include="Assets\ShaderDemo\Shader10\Shaders\Shader1006.shader" />
      <None Include="Assets\ShaderDemo\Shader05\Shader09.shader" />
+     <None Include="Assets\ShaderDemo\Shader12\Shader\Shader1201.shader" />
      <None Include="Assets\ShaderDemo\Shader05\Shader08.shader" />
      <None Include="Assets\ShaderDemo\Shader05\Shader12.shader" />
      <None Include="Assets\ShaderDemo\Shader05\Shader14.shader" />
@@ -121,16 +131,23 @@
      <None Include="Assets\ShaderDemo\Shader05\Shader05.shader" />
      <None Include="Assets\heatmaps\Heatmap.shader" />
      <None Include="Assets\ShaderDemo\Shader06\Shader008.shader" />
+     <None Include="Assets\ShaderDemo\Shader10\Shaders\Shader1007.shader" />
+     <None Include="Assets\ShaderDemo\Shader10\Shaders\Shader1011.shader" />
      <None Include="Assets\ShaderDemo\Shader06\Shader012.shader" />
      <None Include="Assets\ShaderDemo\Shader07\Shader\Shader0703.shader" />
      <None Include="Assets\ShaderDemo\Shader05\MaskEffect.shader" />
+     <None Include="Assets\ShaderDemo\Shader10\Shaders\Shader1003.shader" />
+     <None Include="Assets\ShaderDemo\Shader10\Shaders\Shader1004.shader" />
      <None Include="Assets\Assets1\Shaders\Ballooncat.shader" />
      <None Include="Assets\ShaderDemo\Shader06\Shader006.shader" />
      <None Include="Assets\ShaderDemo\Shader05\Shader10.shader" />
      <None Include="Assets\ShaderDemo\Shader07\Shader\Shader0709.shader" />
+     <None Include="Assets\ShaderDemo\Shader10\ZTest\Shader\CustomDepth.shader" />
      <None Include="Assets\MeshDemo\readme.txt" />
      <None Include="Assets\ShaderDemo\Shader06\Shader010.shader" />
      <None Include="Assets\ShaderDemo\Shader06\Shader001.shader" />
+     <None Include="Assets\ShaderDemo\Shader10\Shaders\Shader1005.shader" />
+     <None Include="Assets\ShaderDemo\Shader10\ZTest\Shader\CustomDepthShader.shader" />
      <None Include="Assets\ShaderDemo\Shader05\Shader17.shader" />
      <None Include="Assets\ShaderDemo\Shader05\Shader18.shader" />
      <None Include="Assets\Assets1\Shaders\Cylinder.shader" />
@@ -140,6 +157,7 @@
      <None Include="Assets\ShaderDemo\Shader07\Shader\Shader0705.shader" />
      <None Include="Assets\ShaderDemo\Shader05\Shader07.shader" />
      <None Include="Assets\ShaderDemo\Shader05\Shader11.shader" />
+     <None Include="Assets\ShaderDemo\Shader10\Shaders\Shader1010.shader" />
      <None Include="Assets\ShaderDemo\Shader07\Shader\Shader0702.shader" />
      <None Include="Assets\ShaderDemo\Shader05\Shader19.shader" />
      <None Include="Assets\ShaderDemo\Shader08\Shader\Shader0808.shader" />
@@ -152,6 +170,7 @@
      <None Include="Assets\ShaderTutorial\RainDrop\debris.shader" />
      <None Include="Assets\ShaderDemo\Shader05\Shader15.shader" />
      <None Include="Assets\ShaderDemo\Shader07\Shader\Shader0701.shader" />
+     <None Include="Assets\ShaderDemo\Shader10\Shaders\Shader1012.shader" />
      <None Include="Assets\ShaderDemo\Shader08\Shader\Shader0802.shader" />
      <None Include="Assets\ShaderDemo\Shader05\Shader06.shader" />
      <None Include="Assets\ShaderDemo\Shader07\Shader\Shader0710.shader" />
@@ -162,13 +181,17 @@
      <None Include="Assets\ShaderDemo\Shader05\Shader13.shader" />
      <None Include="Assets\Assets1\Shaders\CutPlane.shader" />
      <None Include="Assets\ShaderDemo\Shader06\Shader005.shader" />
+     <None Include="Assets\ShaderDemo\Shader10\Shaders\Shader1013.shader" />
      <None Include="Assets\ShaderDemo\Shader05\NewSurfaceShader.shader" />
      <None Include="Assets\ShaderDemo\Shader08\Shader\Shader0807.shader" />
      <None Include="Assets\ShaderDemo\Shader08\Shader\Shader0804.shader" />
      <None Include="Assets\ShaderDemo\Shader08\Shader\Shader0803.shader" />
      <None Include="Assets\ShaderDemo\Shader07\Shader\Shader0708.shader" />
+     <None Include="Assets\ShaderDemo\Shader10\Shaders\Shader1009.shader" />
      <None Include="Assets\ShaderDemo\Shader09\Shader\Shader0902.shader" />
+     <None Include="Assets\ShaderDemo\Shader10\ZTest\Shader\CustomShader.shader" />
      <None Include="Assets\ShaderDemo\Shader08\Shader\Shader0806.shader" />
+     <None Include="Assets\ShaderDemo\Shader10\Shaders\Shader1008.shader" />
      <None Include="Assets\ShaderDemo\Shader06\Shader003.shader" />
      <None Include="Assets\ShaderDemo\Shader05\Shader04.shader" />
      <None Include="Assets\ShaderDemo\Shader05\Shader03.shader" />

@@ -26,7 +26,6 @@
 			o.Albedo = c.rgb;
 			o.Alpha = _Intensity;
         }
-        
         ENDCG
     }
     Fallback "Diffuse"

@@ -40,13 +40,11 @@
             }
             fixed4 frag (v2f i) : SV_Target
             {
-                i.uv.xy-=fixed2(0.5,0.5);
                 // fixed a = clamp(dot(fixed2(1,0),i.uv.xy),0,0.5);
-
                 // fixed result = dot(_edges[_index],normalize(i.uv.xy));
-                fixed result = dot(fixed2(0,1),normalize(i.uv.xy));
+                fixed result = dot(fixed2(0.5,0.5),normalize(i.uv.xy));
                 fixed a = 0;
-                if(result>0.7f)
+                if(result>=0.7f)
                 {
                     a=1;
                 }
