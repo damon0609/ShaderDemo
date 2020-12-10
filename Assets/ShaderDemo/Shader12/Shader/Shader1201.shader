@@ -1,6 +1,6 @@
 ﻿// Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
 
-Shader "Custom/10/Shader1201"
+Shader "Custom/12/Shader1201"
 {
     Properties
     {

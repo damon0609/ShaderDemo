@@ -239,10 +239,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2012037218}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48c0fb3d5ceb846bbbc72f28a19a5103, type: 3}
+  m_Script: {fileID: 11500000, guid: a89d9b55d36e60f41843c6bc6f1d623a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: 97f02fe29e5d24286befa76ae0e5033c, type: 2}
+  material: {fileID: 2100000, guid: b5351401bca47654394d280d7645f805, type: 2}
 --- !u!81 &2012037220
 AudioListener:
   m_ObjectHideFlags: 0
@@ -275,7 +275,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 50
   field of view: 60
   orthographic: 0
   orthographic size: 5
