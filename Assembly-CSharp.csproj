@@ -86,7 +86,6 @@
      <Compile Include="Assets\ShaderDemo\Shader12\Scripts\CameraMatrix1.cs" />
      <Compile Include="Assets\ShaderDemo\Shader12\Scripts\CameraMatrix2.cs" />
      <Compile Include="Assets\ShaderTutorial\OVRScreenFade\OVRScreenFade.cs" />
-     <Compile Include="Assets\ShaderTutorial\OVRScreenFade2\OVRScreenFade2.cs" />
      <Compile Include="Assets\ShaderTutorial\RainDrop\Debris.cs" />
      <Compile Include="Assets\ShaderTutorial\RainDrop\SimpleMovement.cs" />
      <Compile Include="Assets\ShaderTutorial\ShaderTutorial2D\Tutorial1\Tutorial1.cs" />
