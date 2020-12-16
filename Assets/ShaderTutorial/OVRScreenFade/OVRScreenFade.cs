@@ -12,7 +12,9 @@ public class OVRScreenFade : MonoBehaviour {
 
     void Awake()
     {
+        //动态创建一个材质球赋予指定的shader
         fadeMaterial = new Material(Shader.Find("Unlit/OVRScreenFade"));
+        fadeMaterial.hideFlags = HideFlags.HideAndDontSave;
     }
 
     void OnEnable()
@@ -35,8 +37,8 @@ public class OVRScreenFade : MonoBehaviour {
 
     IEnumerator FadeIn()
     {
-        float elapsedTime = 0.0f;
-        fadeMaterial.color = fadeColor;
+        float elapsedTime = 0.0f;//计算运行时长
+        fadeMaterial.color = fadeColor;//给材质球赋予基本颜色
         Color color = fadeColor;
         isFading = true;
         while (elapsedTime < fadeTime)

@@ -24,88 +24,91 @@ using UnityEngine;
 
 namespace Reaktion {
 
-public class ConstantMotion : MonoBehaviour
-{
-    public enum TransformMode {
-        Off, XAxis, YAxis, ZAxis, Arbitrary, Random
-    };
-
-    // A class for handling each transformation.
-    [System.Serializable]
-    public class TransformElement
-    {
-        public TransformMode mode = TransformMode.Off;
-        public float velocity = 1;
-
-        // Used only in the arbitrary mode.
-        public Vector3 arbitraryVector = Vector3.up;
-
-        // Affects velocity.
-        public float randomness = 0;
-
-        // Randomizer states.
-        Vector3 randomVector;
-        float randomScalar;
-
-        public void Initialize()
-        {
-            randomVector = Random.onUnitSphere;
-            randomScalar = Random.value;
+    public class ConstantMotion : MonoBehaviour {
+        public enum TransformMode {
+            Off,
+            XAxis,
+            YAxis,
+            ZAxis,
+            Arbitrary,
+            Random
         }
 
-        // Get a vector corresponds to the current transform mode.
-        public Vector3 Vector {
-            get {
-                switch (mode)
-                {
-                    case TransformMode.XAxis:     return Vector3.right;
-                    case TransformMode.YAxis:     return Vector3.up;
-                    case TransformMode.ZAxis:     return Vector3.forward;
-                    case TransformMode.Arbitrary: return arbitraryVector;
-                    case TransformMode.Random:    return randomVector;
+        //变换的元素
+        // A class for handling each transformation.
+        [System.Serializable]
+        public class TransformElement {
+            public TransformMode mode = TransformMode.Off;
+            public float velocity = 1;
+
+            // Used only in the arbitrary mode.
+            public Vector3 arbitraryVector = Vector3.up;
+
+            // Affects velocity.
+            public float randomness = 0;
+
+            // Randomizer states.
+            Vector3 randomVector;
+            float randomScalar;
+
+            public void Initialize () {
+                randomVector = Random.onUnitSphere; //在球上随机一个向量
+                randomScalar = Random.value; //在[0,1]之间随机一个值
+            }
+
+            // Get a vector corresponds to the current transform mode.
+            public Vector3 Vector {
+                get {
+                    switch (mode) {
+                        case TransformMode.XAxis:
+                            return Vector3.right;
+                        case TransformMode.YAxis:
+                            return Vector3.up;
+                        case TransformMode.ZAxis:
+                            return Vector3.forward;
+                        case TransformMode.Arbitrary:
+                            return arbitraryVector;
+                        case TransformMode.Random:
+                            return randomVector;
+                    }
+                    return Vector3.zero;
                 }
-                return Vector3.zero;
+            }
+
+            // Get the current delta value.
+            public float Delta {
+                get {
+                    var scale = (1.0f - randomness * randomScalar);
+                    return velocity * scale * Time.deltaTime;
+                }
             }
         }
 
-        // Get the current delta value.
-        public float Delta {
-            get {
-                var scale = (1.0f - randomness * randomScalar);
-                return velocity * scale * Time.deltaTime;
+        public TransformElement position = new TransformElement ();
+        public TransformElement rotation = new TransformElement { velocity = 30 };
+        public bool useLocalCoordinate = true; //是否使用本地坐标系
+
+        void Awake () {
+            position.Initialize ();
+            rotation.Initialize ();
+        }
+
+        void Update () {
+            if (position.mode != TransformMode.Off) {
+                if (useLocalCoordinate)
+                    transform.localPosition += position.Vector * position.Delta;
+                else
+                    transform.position += position.Vector * position.Delta;
+            }
+
+            if (rotation.mode != TransformMode.Off) {
+                var delta = Quaternion.AngleAxis (rotation.Delta, rotation.Vector);
+                if (useLocalCoordinate)
+                    transform.localRotation = delta * transform.localRotation;
+                else
+                    transform.rotation = delta * transform.rotation;
             }
         }
     }
-
-    public TransformElement position = new TransformElement();
-    public TransformElement rotation = new TransformElement{ velocity = 30 };
-    public bool useLocalCoordinate = true;
-
-    void Awake()
-    {
-        position.Initialize();
-        rotation.Initialize();
-    }
-
-    void Update()
-    {
-        if (position.mode != TransformMode.Off)
-        {
-            if (useLocalCoordinate)
-                transform.localPosition += position.Vector * position.Delta;
-            else
-                transform.position += position.Vector * position.Delta;
-        }
-
-        if (rotation.mode != TransformMode.Off)
-        {
-            var delta = Quaternion.AngleAxis(rotation.Delta, rotation.Vector);
-            if (useLocalCoordinate)
-                transform.localRotation = delta * transform.localRotation;
-            else
-                transform.rotation = delta * transform.rotation;
-        }
-    }
-}
 
 } // namespace Reaktion
