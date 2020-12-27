@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
-public class BezierCurves : MonoBehaviour {
+public class BezierCurves : MonoBehaviour
+{
     public GameObject start;
     public GameObject middle;
     public GameObject end;
@@ -9,25 +10,27 @@ public class BezierCurves : MonoBehaviour {
     public float width = 0.2f;
     public int numberOfPoints = 20;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         LineRenderer lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.useWorldSpace = true;
-        lineRenderer.material = new Material(Shader.Find("Particles/Additive"));
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        // lineRenderer.material = new Material(Shader.Find("Particles/Additive"));
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         LineRenderer lineRenderer = GetComponent<LineRenderer>();
-        if(null==lineRenderer||null==start||null==middle||null==end)
+        if (null == lineRenderer || null == start || null == middle || null == end)
         {
             return;
         }
 
         lineRenderer.SetColors(color, color);
         lineRenderer.SetWidth(width, width);
-        if(numberOfPoints>0)
+        if (numberOfPoints > 0)
         {
             lineRenderer.SetVertexCount(numberOfPoints);
         }
@@ -37,7 +40,7 @@ public class BezierCurves : MonoBehaviour {
         Vector3 p2 = end.transform.position;
 
         float t;
-        Vector3 position ;
+        Vector3 position;
         for (int i = 0; i < numberOfPoints; i++)
         {
             t = i / (numberOfPoints - 1.0f);
@@ -47,6 +50,6 @@ public class BezierCurves : MonoBehaviour {
         + t * t * p2;
             lineRenderer.SetPosition(i, position);
         }
-	
-	}
+
+    }
 }

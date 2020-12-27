@@ -135,6 +135,7 @@
      <None Include="Assets\ShaderDemo\Shader05\Shader10.shader" />
      <None Include="Assets\ShaderDemo\Shader07\Shader\Shader0709.shader" />
      <None Include="Assets\ShaderDemo\Shader10\ZTest\Shader\CustomDepth.shader" />
+     <None Include="Assets\ShaderDemo\Shader12\Shader\Shader1204.shader" />
      <None Include="Assets\MeshDemo\readme.txt" />
      <None Include="Assets\ShaderDemo\Shader06\Shader010.shader" />
      <None Include="Assets\ShaderDemo\Shader06\Shader001.shader" />
