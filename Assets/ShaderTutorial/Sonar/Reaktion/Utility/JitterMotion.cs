@@ -23,7 +23,8 @@
 using UnityEngine;
 
 namespace Reaktion {
-
+    
+//振幅运动
 public class JitterMotion : MonoBehaviour
 {
     public float positionFrequency = 0.2f;
